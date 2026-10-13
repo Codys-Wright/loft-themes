@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "packs": {},
+  "importers": {
+    "qylock": { "source": "https://github.com/Darkkal44/qylock", "license": "GPL-3.0" },
+    "cozytile": {
+      "source": "https://github.com/Darkkal44/Cozytile",
+      "license": null,
+      "themes": ["Cozy", "Sakura", "Natura", "Everforest", "Carbon"]
+    }
+  }
+}
