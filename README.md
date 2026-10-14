@@ -18,3 +18,19 @@ A pack is a directory under `packs/<name>/`:
 | `wallpaper.*`, `fonts/`, `lock/`, `greeter/`, `apps/` | no | fall back to the default theme's |
 
 The format is specified in the studio-linux [plan](https://github.com/Codys-Wright/studio-linux/blob/main/docs/PLAN.md#42-theme-system-engine-packs-manager-studio-linux-theme-engine) (§4.2) and will move here once it stabilises.
+
+## Vibes
+
+`index.json` `"vibes"` groups packs that share a look. Every pack of a group gets the other members'
+wallpapers and lock designs as curated suggestions (`studio theme vibes <pack>`, the shell's wallpaper
+and lock pickers), shown before the palette-ranked matches. Only installed packs are used; a group may
+name packs that aren't installed (yet).
+
+```json
+{ "name": "sakura", "packs": ["cozytile-sakura", "qylock-pixel-sakura"],
+  "wallpapers": ["<pack>:<file>"], "locks": ["<pack>:<lock name>"] }
+```
+
+`wallpapers` / `locks` (optional) add specific assets to every member. The importers copy a pack's
+links into its `manifest.json` (`vibes`) so they also hold offline; `studio` reads this index from
+`$STUDIO_THEME_INDEX` (a path or URL, `none` to disable), by default this file on GitHub (cached a day).

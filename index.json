@@ -8,5 +8,10 @@
       "license": null,
       "themes": ["Cozy", "Sakura", "Natura", "Everforest", "Carbon"]
     }
-  }
+  },
+  "vibes": [
+    { "name": "sakura", "description": "Cherry blossom pinks", "packs": ["cozytile-sakura", "qylock-pixel-sakura"] },
+    { "name": "forest", "description": "Misty greens and foliage", "packs": ["cozytile-everforest", "cozytile-natura", "qylock-forest"] },
+    { "name": "monochrome", "description": "Paper greys, e-ink", "packs": ["cozytile-carbon", "qylock-nier-automata"] }
+  ]
 }
